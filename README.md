@@ -66,6 +66,7 @@ systemctl enable amiibopi.service
 systemctl start amiibopi.service
 ```
 ## Credits
+Credits to:
 [mart1nro](https://github.com/mart1nro) for the joycontrol libary.
 
 ## Contributing
