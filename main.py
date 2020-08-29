@@ -9,7 +9,7 @@ from PIL import ImageFont
 
 import subprocess
 #location of controller.py and its parameters
-controllerpy = "/tmp/pycharm_project_146/controller.py PRO_CONTROLLER --nfc "
+controllerpy = "/opt/amiibopi/controller.py PRO_CONTROLLER --nfc "
 # Raspberry Pi pin configuration:
 RST = None  # on the PiOLED this pin isnt used
 # Note the following are only used with SPI:
