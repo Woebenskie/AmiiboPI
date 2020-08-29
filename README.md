@@ -65,6 +65,8 @@ WantedBy=multi-user.target
 systemctl enable amiibopi.service
 systemctl start amiibopi.service
 ```
+## Credits
+[mart1nro](https://github.com/mart1nro) for the joycontrol libary.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
