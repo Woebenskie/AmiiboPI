@@ -36,10 +36,10 @@ Package it self:
 cd /opt/
 git clone https://github.com/Woebenskie/AmiiboPI.git
 ```
-Edit parameter ```controllerpy``` in ```main.py``` to point to te location of the controller.py (```default: /opt/amiibopi/```) file. (Leave the Arguments)
+Edit parameter ```controllerpy``` in ```main.py``` to point to te location of the controller.py (```default: /opt/AmiiboPI/```) file. (Leave the Arguments)
 
 ```bash
-nano /opt/amiibopi/main.py
+nano /opt/AmiiboPI/main.py
 ```
 
 ## Usage
@@ -57,7 +57,7 @@ Description=AmiiboPI
 
 [Service]
 Type=simple
-ExecStart=/usr/lib/python3 /opt/amiibopi/main.py
+ExecStart=/usr/lib/python3 /opt/AmiiboPI/main.py
 
 [Install]
 WantedBy=multi-user.target
