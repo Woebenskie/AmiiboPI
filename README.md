@@ -57,7 +57,7 @@ Description=AmiiboPI
 
 [Service]
 Type=simple
-ExecStart=/usr/lib/python3 /opt/AmiiboPI/main.py
+ExecStart=/usr/bin/python3 /opt/AmiiboPI/main.py
 
 [Install]
 WantedBy=multi-user.target
