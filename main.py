@@ -167,7 +167,8 @@ while True:
             print(str(pwdt))
         elif ".bin" in sel:
             os.system("/usr/bin/python3 " + controllerpy + os.path.join(pwdt,sel))
-
+            todisp = 0
+            cursor = 0
 
     if todisp >= ammount_pages-1:
         todisp = ammount_pages-1
