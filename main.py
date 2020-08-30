@@ -1,6 +1,6 @@
 import time
 import os
-import Adafruit_GPIO.SPI as SPI
+
 import Adafruit_SSD1306
 import RPi.GPIO as GPIO
 from PIL import Image
@@ -70,34 +70,34 @@ draw_height = disp.height
 drawing_image = Image.new('1', (draw_width, draw_height))
 drawing = ImageDraw.Draw(drawing_image)
 
-def draw_image(list,cursor):
-    cmd = 'pwd'
-    pwd = subprocess.check_output(cmd, shell=True)
-    pwd = str(pwd).split('/')
+def draw_image(combined_list, cursor_loc):
+    command = 'pwd'
+    get_work_dir = subprocess.check_output(command, shell=True)
+    get_work_dir = str(get_work_dir).split('/')
     drawing.rectangle((0, 0, width, height), outline=0, fill=0)
-    drawing.text((x, top), str(pwd[-1]).replace("b'", '').replace("\\n'", "").replace('/root', ''), font=font, fill=255)
-    drawing.text((x, top + 8), str(list[cursor]).replace("b'", '').replace("\\n'", ""), font=font, fill=255)
-    drawing.text((x, top + 16), str(list[0]).replace("b'", '').replace("\\n'", ""), font=font, fill=255)
-    drawing.text((x, top + 24), str(list[1]).replace("b'", '').replace("\\n'", ""), font=font, fill=255)
-    drawing.text((x, top + 32), str(list[2]).replace("b'", '').replace("\\n'", ""), font=font, fill=255)
-    drawing.text((x, top + 40), str(list[3]).replace("b'", '').replace("\\n'", ""), font=font, fill=255)
-    drawing.text((x, top + 48), str(list[4]).replace("b'", '').replace("\\n'", ""), font=font, fill=255)
-    drawing.text((x, top + 56), str(list[5]).replace("b'", '').replace("\\n'", ""), font=font, fill=255)
+    drawing.text((x, top), str(get_work_dir[-1]).replace("b'", '').replace("\\n'", "").replace('/root', ''), font=font, fill=255)
+    drawing.text((x, top + 8), str(combined_list[cursor_loc]).replace("b'", '').replace("\\n'", ""), font=font, fill=255)
+    drawing.text((x, top + 16), str(combined_list[0]).replace("b'", '').replace("\\n'", ""), font=font, fill=255)
+    drawing.text((x, top + 24), str(combined_list[1]).replace("b'", '').replace("\\n'", ""), font=font, fill=255)
+    drawing.text((x, top + 32), str(combined_list[2]).replace("b'", '').replace("\\n'", ""), font=font, fill=255)
+    drawing.text((x, top + 40), str(combined_list[3]).replace("b'", '').replace("\\n'", ""), font=font, fill=255)
+    drawing.text((x, top + 48), str(combined_list[4]).replace("b'", '').replace("\\n'", ""), font=font, fill=255)
+    drawing.text((x, top + 56), str(combined_list[5]).replace("b'", '').replace("\\n'", ""), font=font, fill=255)
     return drawing_image
 
-def list_split(list):
-    bufflist = list
-    listoflist = []
+def list_split(list_to_split):
+    bufflist = list_to_split
+    listoflists = []
     templist = []
-    while len(list) % 6 != 0:
+    while len(list_to_split) % 6 != 0:
         bufflist.append("-")
     for item in bufflist:
         if len(templist) > 5:
-            listoflist.append(templist)
+            listoflists.append(templist)
             templist=[]
         templist.append(item.replace('_',' '))
-    listoflist.append(templist)
-    return listoflist
+    listoflists.append(templist)
+    return listoflists
 
 lines = 6
 cursor = 0
