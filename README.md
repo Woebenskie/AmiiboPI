@@ -24,18 +24,22 @@ Raspberry pi ZeroW With Female GPIO
 3D Printer #to create the enclosure find stl's in other repo.
 ## Installation
 
-Requirements:
-
-```bash
-pip3 install -r requirements.txt
-apt install python3-dbus libhidapi-hidraw0
-```
 Package it self:
 
 ```bash
 cd /opt/
 git clone https://github.com/Woebenskie/AmiiboPI.git
 ```
+
+Requirements:
+
+```bash
+cd /opt/AmiiboPI/
+pip3 install .
+pip3 install -r requirements.txt
+apt install python3-dbus libhidapi-hidraw0
+```
+
 Edit parameter ```controllerpy``` in ```main.py``` to point to te location of the controller.py (```default: /opt/AmiiboPI/```) file. (Leave the Arguments)
 
 ```bash
