@@ -40,12 +40,6 @@ pip3 install -r requirements.txt
 apt install python3-dbus libhidapi-hidraw0
 ```
 
-Edit parameter ```controllerpy``` in ```main.py``` to point to te location of the controller.py (```default: /opt/AmiiboPI/```) file. (Leave the Arguments)
-
-```bash
-nano /opt/AmiiboPI/main.py
-```
-
 ## Usage
 Either run via sudo or as root user.
 
