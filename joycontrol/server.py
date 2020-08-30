@@ -10,7 +10,7 @@ from joycontrol.device import HidDevice
 from joycontrol.report import InputReport
 from joycontrol.transport import L2CAP_Transport
 
-PROFILE_PATH = pkg_resources.resource_filename('joycontrol', 'profile/sdp_record_hid.xml')
+PROFILE_PATH = "/opt/AmiiboPI/joycontrol/profile/sdp_record_hid.xml" #pkg_resources.resource_filename('joycontrol', 'profile/sdp_record_hid.xml')
 logger = logging.getLogger(__name__)
 
 
