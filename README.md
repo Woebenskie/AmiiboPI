@@ -6,8 +6,6 @@ Tested on RPI zeroW with raspberrypi os
 
 Find Eagle and Fusion360 Files in this repo: [Extras](https://github.com/Woebenskie/AmiiboPI-extra)
 
-## Looks
-
 ## Parts List
 Raspberry pi ZeroW With Female GPIO
 
